@@ -77,7 +77,7 @@ def doc_str_to_mdx(
     params.append({
       "name": p.arg_name,
       "type": str(p.type_name),
-      "description": p.description,
+      "description": p.description.replace("\n"," "),
     })
 
   # template this thing
