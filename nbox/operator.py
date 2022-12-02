@@ -163,7 +163,7 @@ class Operator():
     
     Usage:
 
-    .. code-block:: python
+    ```python
       
       class MyOperator(Operator):
         def __init__(self, ...):
@@ -189,6 +189,7 @@ class Operator():
 
       # deploy this as a batch process or API endpoint or API endpoint
       job.deploy() # WIP # WIP
+      ```
     """
     # do not add anything in here, else it will call self.__getattr__ and cause a RecursionError
     self._operators: Dict[str, 'Operator'] = OrderedDict() # {name: operator}
