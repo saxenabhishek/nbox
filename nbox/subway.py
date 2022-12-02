@@ -15,9 +15,9 @@ serialisation and networking combined. This kind of added complexity can:
 
 Based os these ideas there are three types of subways:
 
-- `Subway`: Does not load OpenAPI spec and will blindly call the API, avoid this
-- `Sub30`: Built for OpenAPI v3.0.0, this becomes `nbox_ws_v1`
-- `SpecSubway`: This is used with the FastAPI's OpenAPI spec, this is used in systems
+1. `Subway`: Does not load OpenAPI spec and will blindly call the API, avoid this
+2. `Sub30`: Built for OpenAPI v3.0.0, this becomes `nbox_ws_v1`
+3. `SpecSubway`: This is used with the FastAPI's OpenAPI spec, this is used in systems
   that use FastAPI (eg. Compute Server)
 """
 

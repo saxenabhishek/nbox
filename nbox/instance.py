@@ -9,18 +9,17 @@ CLI Commands
 Build comes built in with several functions to move and list files from the instance. All you need to know is that
 cloud files have prefix ``nbx://`` which is where your projects are. Here's a quick list:
 
-.. code-block:: bash
-
+```
   # move files
-  nbx build -i 'instance_name' --workspace_id 'workspace_id' \
-    mv ./local_file nbx://cloud_file
+  nbx build -i 'instance_name' --workspace_id 'workspace_id' 
+  mv ./local_file nbx://cloud_file
 
   # or move folders
-  nbx build -i 'instance_name' --workspace_id 'workspace_id' \
-    mv ./local_folder nbx://in_this/folder/
+  nbx build -i 'instance_name' --workspace_id 'workspace_id' 
+  mv ./local_folder nbx://in_this/folder/
+```
 
-
-You might be required to agree to the SSH connection being setup. If you want to avoid that set ``NBOX_SSH_NO_HOST_CHECKING=1``.
+You might be required to agree to the SSH connection being setup. If you want to avoid that set `NBOX_SSH_NO_HOST_CHECKING=1`.
 All these APIs are also available in python.
 
 Documentation
@@ -93,11 +92,11 @@ class Instance():
     deletion and more.
 
     Args:
-        i (str): name or ``project_id`` of the instance
+        i (str): name or `project_id` of the instance
         workspace_id (int, optional): id of the workspace to use, if not provided
             personal workspace will be used.
         cs_endpoint (str, optional): endpoint to use for the webserver, this will connect
-          to the custom ports functionality of the instance. Defaults to ``server``,
+          to the custom ports functionality of the instance. Defaults to `server`,
     """
     if not i:
       raise ValueError("Instance id must be provided, try --i='8h57f9'")
@@ -314,8 +313,8 @@ class Instance():
     Actual start is implemented in `_start` method, this combines other things
 
     Args:
-        cpu (int, optional): CPU count should be one of ``[2, 4, 8]``
-        gpu (str, optional): GPU name should be one of ``["t5", "p100", "v100", "k80"]``
+        cpu (int, optional): CPU count should be one of [2, 4, 8]
+        gpu (str, optional): GPU name should be one of ["t5", "p100", "v100", "k80"]
         gpu_count (int, optional): When zero, cpu-only instance is started
         auto_shutdown (int, optional): No autoshutdown if zero, defaults to 6.
         dedicated_hw (bool, optional): If not spot/pre-emptible like machines used
@@ -555,15 +554,13 @@ class Instance():
     return result
 
   def __call__(self, x: str):
-    """EXPERIMENTAL: FEATURES MIGHT BREAK
-
+    """**EXPERIMENTAL: FEATURES MIGHT BREAK**
     Caller is the most important UI/UX. The letter ``x`` in programming is reserved the most
     arbitrary thing, and this ``nbox.Instance`` is the gateway to a cloud instance. You can:
     1. run a script on the cloud
     2. run a local script on the cloud
     3. get the status of a script
-    4. [TBD] run a special kind of functions known as
-    `pure functions <https://en.wikipedia.org/wiki/Pure_function>`_
+    4. [TBD] run a special kind of functions known as [pure functions](https://en.wikipedia.org/wiki/Pure_function)
 
     Pure functions in programming are functions that are self sufficient in terms of execution,
     eg. all the packages are imported inside the function and there are no side effects in an

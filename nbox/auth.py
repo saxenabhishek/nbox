@@ -1,13 +1,13 @@
 """
-This code is used to manage the authentication of the entire ``nbox`` package. For authentication
-it will create a ``.nbx`` in the user's home directory (``~/.nbx``, in case of linux) and store
-a file called ``secrets.json``. This folder will also contain more information and files that
+This code is used to manage the authentication of the entire `nbox` package. For authentication
+it will create a `.nbx` in the user's home directory (`~/.nbx`, in case of linux) and store
+a file called `secrets.json`. This folder will also contain more information and files that
 are used elsewhere as well ex. files generated when takling to any instance.
 
 Users can chose to set configs at a global level for convenience. Here's a list of configs that can be set:
 
-global.workspace_id = '' # this will set the default workspace id for all commands, users can override this by
-  passing the ``--workspace-id`` flag
+> global.workspace_id = '' # this will set the default workspace id for all commands, users can override this by
+  passing the `--workspace-id` flag
 """
 import os
 import json

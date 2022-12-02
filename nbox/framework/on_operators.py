@@ -1,5 +1,5 @@
 """
-Though initially this code just like the `on_ml.py <nbox.framework.on_ml.html>`_
+Though initially this code just like the `on_ml.py`
 code was build separately for each different package that we supported and that
 led to just some really duct taping and hacking around that made it inefficient
 to scale. The lesson is that premature attempts to scale are as bad as not being
@@ -25,7 +25,8 @@ from nbox.utils import isthere, logger
 class AirflowMixin:
   @isthere("airflow", soft = False)
   def nbx_job_to_airflow_operator(job, timeout: timedelta = None, operator_kwargs = {}):
-    """
+    """Convert NBX job to airflow
+
     Args:
       operator (Operator): nbox.Operator object to be converted to Airflow Operator
       timeout (timedelta, default=None): in how many seconds the operator should timeout

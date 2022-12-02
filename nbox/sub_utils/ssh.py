@@ -1,12 +1,9 @@
 """
 Creates a socket tunnel between users localhost to server called RSockServer (Reverse Socket Server) .
 
-Usage
------
+### Usage
 
-.. code-block:: bash
-
-  nbx tunnel 8000 --i "nbox-dev"
+>  nbx tunnel 8000 --i "nbox-dev"
 """
 
 # /Users/yashbonde/Desktop/wrk/nbx/rnd/nbox/nbox/sub_utils/ssh.py:docstring of nbox.sub_utils.ssh:3: ERROR: Unexpected indentation.
@@ -360,7 +357,7 @@ def tunnel(port: int, *apps_to_ports: List[str], i: str, workspace_id: str = "")
   """the nbox way to SSH into your instance.
 
   Usage:
-    nbx tunnel 8000 -i "nbox-dev"
+  > nbx tunnel 8000 -i "nbox-dev"
 
   Args:
     port: Local port for terminal

@@ -414,8 +414,8 @@ class Lmao():
     Register a file save. User should be aware of some structures that we follow for standardizing the data.
     All the experiments are going to be tracked under the following pattern:
 
-    #. `relic_name` is going to be the experiment ID, so any changes to the name will not affect relic storage
-    #. `{experiment_id}(_{job_id}@{experiment_id})` is the name of the folder which contains all the artifacts in the experiment.
+    1. `relic_name` is going to be the experiment ID, so any changes to the name will not affect relic storage
+    2. `{experiment_id}(_{job_id}@{experiment_id})` is the name of the folder which contains all the artifacts in the experiment.
 
     If relics is not enabled, this function will simply log to the LMAO DB.
 

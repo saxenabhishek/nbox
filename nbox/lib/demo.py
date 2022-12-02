@@ -1,6 +1,6 @@
 """
 All the operators that are using the demos are provided here. Highly recommend someome to go through
-this when learning how to code your own ``Operator``.
+this when learning how to code your own `Operator`.
 """
 
 from nbox import Operator, logger

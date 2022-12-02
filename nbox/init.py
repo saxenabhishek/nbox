@@ -1,13 +1,13 @@
 """
 This file loads first and is responsible for setting up all the global networking items.
 
-..
 
-  Build systems are an extremely important detail of any software project. When they work,
-  they can feel like magic: you execute a command, and after a series of potentially
-  complicated steps, a working binary (or other artifact) is produced! When they don't work,
-  they can feel like confusing, non-transparent roadblocks that you wish didn't exist. This
-  is typical for any powerful tool: magic or a headache depending on the day and the task.
+> Build systems are an extremely important detail of any software project. When they work,
+> they can feel like magic: you execute a command, and after a series of potentially
+> complicated steps, a working binary (or other artifact) is produced! When they don't work,
+> they can feel like confusing, non-transparent roadblocks that you wish didn't exist. This
+> is typical for any powerful tool: magic or a headache depending on the day and the task.
+
 """
 
 import os

@@ -427,7 +427,7 @@ def code_node(execution_index, expr, code_lines) -> Node:
 
 
 def get_nbx_flow(forward) -> DAG:
-  """Get NBX flowchart. Read python grammar `here <https://docs.python.org/3/reference/grammar.html>`_
+  """Get NBX flowchart. Read python grammar [here](https://docs.python.org/3/reference/grammar.html)
 
   Args:
       forward (callable): the function whose flowchart is to be generated

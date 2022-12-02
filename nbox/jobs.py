@@ -1,7 +1,7 @@
 """
-``nbox.Job`` and ``nbox.Serve`` are wrappers to the NBX-Jobs and NBX-Deploy APIs and contains staticmethods for convinience from the CLI.
+`nbox.Job` and `nbox.Serve` are wrappers to the NBX-Jobs and NBX-Deploy APIs and contains staticmethods for convinience from the CLI.
 
-* ``datetime.now(timezone.utc)`` is incorrect, use `this <https://blog.ganssle.io/articles/2019/11/utcnow.html>`_ method.
+* `datetime.now(timezone.utc)` is incorrect, use [this](https://blog.ganssle.io/articles/2019/11/utcnow.html) method.
 """
 
 import os
@@ -41,32 +41,32 @@ class Schedule:
   ):
     """Make scheduling natural.
 
-    Usage:
 
-    ```python
-    # 4:20 everyday
-    Schedule(4, 0)
+    
 
-    # 4:20 every friday
-    Schedule(4, 20, ["fri"])
+    Example:
+      # 4:20 everyday
+      Schedule(4, 0)
 
-    # 4:20 every friday from jan to feb
-    Schedule(4, 20, ["fri"], ["jan", "feb"])
+      # 4:20 every friday
+      Schedule(4, 20, ["fri"])
 
-    # 4:20 everyday starting in 2 days and runs for 3 days
-    starts = datetime.now(timezone.utc) + timedelta(days = 2) # NOTE: that time is in UTC
-    Schedule(4, 20, starts = starts, ends = starts + timedelta(days = 3))
+      # 4:20 every friday from jan to feb
+      Schedule(4, 20, ["fri"], ["jan", "feb"])
 
-    # Every 1 hour
-    Schedule(1)
+      # 4:20 everyday starting in 2 days and runs for 3 days
+      starts = datetime.now(timezone.utc) + timedelta(days = 2) # NOTE: that time is in UTC
+      Schedule(4, 20, starts = starts, ends = starts + timedelta(days = 3))
 
-    # Every 69 minutes
-    Schedule(minute = 69)
-    ```
+      # Every 1 hour
+      Schedule(1)
+
+      # Every 69 minutes
+      Schedule(minute = 69)
 
     Args:
-      hour (int): Hour of the day, if only this value is passed it will run every ``hour``
-      minute (int): Minute of the hour, if only this value is passed it will run every ``minute``
+      hour (int): Hour of the day, if only this value is passed it will run every `hour`
+      minute (int): Minute of the hour, if only this value is passed it will run every `minute`
       days (str/list, optional): List of days (first three chars) of the week, if not passed it will run every day.
       months (str/list, optional): List of months (first three chars) of the year, if not passed it will run every month.
       starts (datetime, optional): UTC Start time of the schedule, if not passed it will start now.
@@ -180,14 +180,14 @@ def upload_job_folder(
 
   Args:
     method (str): The method to use, either "job" or "serving"
-    init_folder (str): folder with all the relevant files or ``file_path:fn_name`` pair so you can use it as the entrypoint.
+    init_folder (str): folder with all the relevant files or `file_path:fn_name` pair so you can use it as the entrypoint.
     name (str, optional): Name of the job. Defaults to "".
     id (str, optional): ID of the job. Defaults to "".
     trigger (bool, optional): If uploading a "job" trigger the job after uploading. Defaults to False.
     resource_cpu (str, optional): CPU resource. Defaults to "100m".
     resource_memory (str, optional): Memory resource. Defaults to "128Mi".
     resource_disk_size (str, optional): Disk size resource. Defaults to "3Gi".
-    resource_gpu (str, optional): GPU resource. Defaults to "none".
+    resource_gpu (str, optional): GPU resource. Defaults to "None".
     resource_gpu_count (str, optional): GPU count resource. Defaults to "0".
     resource_timeout (int, optional): Timeout resource. Defaults to 120_000.
     resource_max_retries (int, optional): Max retries resource. Defaults to 2.
@@ -558,7 +558,7 @@ class Job:
     return x
 
   def logs(self, f = sys.stdout):
-    """Stream logs of the job, ``f`` can be anything has a ``.write/.flush`` methods"""
+    """Stream logs of the job, `f` can be anything has a `.write/.flush` methods"""
     logger.debug(f"Streaming logs of job '{self.job_proto.id}'")
     for job_log in streaming_rpc(
       nbox_grpc_stub.GetJobLogs,

@@ -1,6 +1,6 @@
 """
 With NimbleBox you can run cluster wide workloads from anywhere. This requires capabilities around distributed computing,
-process managements. The code here is tested along with ``nbox.Relic`` to perform distributed local processing.
+process managements. The code here is tested along with `nbox.Relic` to perform distributed local processing.
 """
 
 import os

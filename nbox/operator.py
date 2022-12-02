@@ -161,10 +161,7 @@ class Operator():
     """Create an operator, which abstracts your code into sharable, bulding blocks which
     can then deployed on either NBX-Jobs or NBX-Deploy.
     
-    Usage:
-
-    ```python
-      
+    Examples:
       class MyOperator(Operator):
         def __init__(self, ...):
           ... # initialisation of job happens here
@@ -188,8 +185,7 @@ class Operator():
       job: Operator = MyOperator(...)
 
       # deploy this as a batch process or API endpoint or API endpoint
-      job.deploy() # WIP # WIP
-      ```
+      job.deploy() # WIP 
     """
     # do not add anything in here, else it will call self.__getattr__ and cause a RecursionError
     self._operators: Dict[str, 'Operator'] = OrderedDict() # {name: operator}

@@ -2,14 +2,13 @@
 This is CLI for `nbox`, it is meant to be as simple to use as possible. We using `python-fire` for building
 our CLI, which means you can access underlying system with same commands as you use with python.
 
-# SSH into Instances
+## SSH into Instances
 
 You can SSH into your instance with the `nbx tunnel` command. This command will create a tunnel
 to your instance and start an SSH session.
 
-```bash
-nbx tunnel 8000 -i "instance-name"
-```
+> nbx tunnel 8000 -i "instance-name"
+
 """
 
 import os

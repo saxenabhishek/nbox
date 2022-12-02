@@ -210,7 +210,7 @@ class Astea:
   def find(self, x: str = "", types: Union[IndexTypes, List[IndexTypes]] = None) -> List['Astea']:
     """Find all the instances of x in the current node, and return a list of IndexItems.
     
-    - if there is a '.' (dot) in `x`, `find` will try to perform a recursive search, you can escape the dot with a backslash
+    - if there is a `'.'` (dot) in `x`, `find` will try to perform a recursive search, you can escape the dot with a backslash
     - This currently does not work correctly when the same name is used in different types
     - if both `x` and `types` is not provided, then this behaves just like `.index`
 

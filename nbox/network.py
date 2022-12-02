@@ -173,8 +173,8 @@ def deploy_job(
     job_id_or_name (Union[str, int], optional): Name or ID of the job
     dag (DAG): DAG to upload
     workspace_id (str): Workspace ID to deploy to, if not specified, will use the personal workspace
-    schedule (Schedule, optional): If ``None`` will run only once, else will schedule the job
-    cache_dir (str, optional): Folder where to put the zipped file, if ``None`` will be ``tempdir``
+    schedule (Schedule, optional): If `None` will run only once, else will schedule the job
+    cache_dir (str, optional): Folder where to put the zipped file, if `None` will be `tempdir`
   Returns:
     Job: Job object
   """

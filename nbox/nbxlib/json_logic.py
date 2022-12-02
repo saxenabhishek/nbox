@@ -27,8 +27,8 @@ def _merge(*args):
 class JsonLogic():
   def __init__(self, rules, data = {}):
     """
-    Modified for our needs from: https://github.com/nadirizr/json-logic-py
-    This is a Python implementation of the following jsonLogic JS library: https://github.com/jwadhams/json-logic-js
+    Modified for our needs from: [json-logic-py](https://github.com/nadirizr/json-logic-py)
+    This is a Python implementation of the following jsonLogic JS library: [json-logic-js](https://github.com/jwadhams/json-logic-js)
 
     Args:
       rules (dict): The rules to be applied

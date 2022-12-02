@@ -205,15 +205,21 @@ def get_messages(module):
 
 def _resolve_subkeys(key, separator="."):
   """Resolve a potentially nested key.
-  If the key contains the ``separator`` (e.g. ``.``) then the key will be
-  split on the first instance of the subkey::
-    >>> _resolve_subkeys('a.b.c')
-    ('a', 'b.c')
-    >>> _resolve_subkeys('d|e|f', separator='|')
-    ('d', 'e|f')
-  If not, the subkey will be :data:`None`::
-    >>> _resolve_subkeys('foo')
-    ('foo', None)
+  If the key contains the `separator` (e.g. `.`) then the key will be
+  split on the first instance of the subkey:
+
+  Examples:
+    _resolve_subkeys('a.b.c')
+    # ('a', 'b.c')
+
+    _resolve_subkeys('d|e|f', separator='|')
+    # ('d', 'e|f')
+
+    # If not, the subkey will be :data:`None`:
+    _resolve_subkeys('foo')
+    # ('foo', None)
+
+  
   Args:
     key (str): A string that may or may not contain the separator.
     separator (str): The namespace separator. Defaults to `.`.

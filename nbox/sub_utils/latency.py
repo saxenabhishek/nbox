@@ -25,20 +25,23 @@ from nbox.utils import logger
 def log_latency(region_name_or_function_to_decorate, log_level=None):
   """Log latency in a function or region.
   Three usages are supported. As a decorator:
-  >>> @log_latency
-  ... def function_1():
-  ...   pass
-  ...
-  As a decorator with a custom label for the region:
-  >>> @log_latency("custom_label")
-  ... def function_2():
-  ...   pass
-  ...
-  As a context manager:
-  >>> def function_3():
-  ...   with log_latency("region_within_function"):
-  ...     pass
-  ...
+  
+  Example:
+    @log_latency
+    def function_1():
+      pass
+
+    # As a decorator with a custom label for the region:
+    @log_latency("custom_label")
+    def function_2():
+      pass
+    
+    # As a context manager:
+    def function_3():
+      with log_latency("region_within_function"):
+        pass
+  
+  
   Args:
     region_name_or_function_to_decorate: Either: a `str`, in which
       case the result of this function may be used as either a

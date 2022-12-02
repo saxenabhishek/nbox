@@ -29,7 +29,7 @@ def remove_kwargs(model_fn, kwargs):
 
 @isthere("efficientnet_pytorch", soft = False)
 def _efficientnet_pytorch_models(pretrained=False, **kwargs):
-  """`Efficientnet <https://github.com/lukemelas/EfficientNet-PyTorch>`_ package"""
+  """ [Efficientnet](https://github.com/lukemelas/EfficientNet-PyTorch) package"""
   import efficientnet_pytorch
 
   if pretrained:
@@ -43,7 +43,7 @@ def _efficientnet_pytorch_models(pretrained=False, **kwargs):
 
 @isthere("torchvision", soft = False)
 def _torchvision_models(model, pretrained=False, **kwargs) -> Dict:
-  """`torchvision <https://pytorch.org/vision/stable/models.html`_ package"""
+  """ [torchvision](https://pytorch.org/vision/stable/models.html) package"""
   # tv_mr = torchvision models registry
   # this is a json object that maps all the models to their respective methods from torchvision
   # the trick to loading is to eval the method string
@@ -64,7 +64,7 @@ def _torchvision_models(model, pretrained=False, **kwargs) -> Dict:
 
 @isthere("transformers", soft = False)
 def _transformers_models(model, model_instr, **kwargs):
-  """The legendary `transformers <https://huggingface.co/docs/transformers>`_ package"""
+  """The legendary [transformers](https://huggingface.co/docs/transformers) package"""
   import transformers
 
   _auto_loaders = {x: getattr(transformers, x) for x in dir(transformers) if x[:4] == "Auto" and x != "AutoConfig"}
@@ -113,7 +113,7 @@ def load(model, pre = None, post = None, verbose=False, **loader_kwargs) -> Mode
 
   Args:
 
-    model (str): the index of the model to load, you can check with ``nbox.load.PRETRAINED_MODELS``
+    model (str): the index of the model to load, you can check with `nbox.load.PRETRAINED_MODELS`
     pre (str): the preprocessing to apply to the model, it should be callable and should return a dict
     post (str): the postprocessing to apply to the model, it should be callable and should return anything
       you want
